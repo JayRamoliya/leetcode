@@ -1,0 +1,14 @@
+1716. Calculate Money in Leetcode Bank USING PYTHON
+
+class Solution:
+    def totalMoney(self, n):
+        d=int(n/7)
+        i=d
+        r=n%7
+        ans=0
+        while i >0:
+            ans+=int(((i+(i+7-1))*7)/2)
+            i=i-1
+        if r>0:
+            ans=ans+int((((d+1)+(d+r))*r)/2)
+        return ans
