@@ -1,0 +1,9 @@
+ 1903. Largest Odd Number in String USING PYTHON
+
+class Solution(object):
+    def largestOddNumber(self, num):
+      for i, n in reversed(list(enumerate(num))):
+        if int(n) & 1:
+          return num[:i + 1]
+      return ''
+      
